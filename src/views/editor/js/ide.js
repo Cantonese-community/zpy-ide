@@ -46,13 +46,13 @@ class IDE {
 
     zpyCompile() {
         this.zpyCode = zpyEditor.getValue();
-        this.pyCode = this.zpy.compile(this.zpyCode, 'zpy')
+        this.pyCode = this.zpy.compile(this.zpyCode, 'Cantonese')
         pyEditor.setOption("value", this.pyCode)
     }
 
     pyCompile() {
         this.pyCode = pyEditor.getValue();
-        this.zpyCode = this.zpy.compile(this.pyCode, 'py')
+        this.zpyCode = this.zpy.compile(this.pyCode, 'Cantonese')
         zpyEditor.setOption("value", this.zpyCode)
     }
 }

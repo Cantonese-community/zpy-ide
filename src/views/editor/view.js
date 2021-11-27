@@ -37,26 +37,9 @@ let view = `
                             </div>
                         </div>
                     </div>
-                    <label for="zpy-code">
-                        <textarea id="zpy-code"></textarea>
+                    <label for="cantonese-code">
+                        <textarea id="cantonese-code"></textarea>
                     </label>
-                </div>
-                <div class="editor item" id="python-editor">
-                    <div class="header">
-                        <p class="title editor-title">python编辑区</p>
-                        <div class="toolbar">
-                            <div class="tool" type="button" title="运行" onClick="ide.pyRun()">
-                                <img class="icon" id="py-run" src="${runSvg}" alt="py-run"/>
-                            </div>
-                            <div class="tool" type="button" title="编译" onClick="ide.pyCompile()">
-                                <img class="icon" id="py-compile" src="${compileSvg}" alt="py-compile"/>
-                            </div>
-                        </div>
-                    </div>
-                    <label for="python-code">
-                        <textarea id="python-code"></textarea>
-                    </label>
-                </div>
             </div>
             <div class="output-container item">
                 <pre id="output-code" readOnly></pre>
