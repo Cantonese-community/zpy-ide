@@ -8,10 +8,10 @@ export class ZpyCompile {
         log.info(this.keywords)
     }
 
-    compile(code, type = "Cantonese") {
+    compile(code, type = "zpy") {
 
-        if (type !== "Cantonese") {
-            throw new Error("Compile code should be one of Cantonese")
+        if (type !== "zpy" && type !== "py") {
+            throw new Error("Compile code should be one of zpy, py")
         }
 
         for (let keyword of keywords) {
@@ -20,8 +20,9 @@ export class ZpyCompile {
 
                 if (this.browser() === 'Safari') regexp = keyword.safariReg
                 else regexp = keyword.regexp
-                
-                if (type === "Cantonese") code = code.replace(this.dispose(word, regexp), keyword.words[word])
+
+                if (type === "zpy") code = code.replace(this.dispose(word, regexp), keyword.words[word])
+                else if (type === "py") code = code.replace(this.dispose(keyword.words[word], regexp), word)
             }
         }
         return code

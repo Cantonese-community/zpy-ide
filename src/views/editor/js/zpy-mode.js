@@ -2,7 +2,7 @@
  * JavaScript:
  */
 
-CodeMirror.defineSimpleMode("Cantonese", {
+CodeMirror.defineSimpleMode("zpy", {
   // The start state contains the rules that are initially used
   start: [
     // The regex matches the token, the token property contains the type
@@ -13,9 +13,7 @@ CodeMirror.defineSimpleMode("Cantonese", {
      token: ["keyword", null, "variable-2"]},
     // Rules are matched in the order in which they appear, so there is
     // no ambiguity between this one and the one above
-    {regex: 
-        /畀我睇下|点样先|收工|喺|定|老作一下|起底|讲嘢|咩系|唔系|系|如果|嘅话|->|同埋|咩都唔做|落操场玩跑步|$|用下|使下|要做咩|搞掂|就|谂下|佢嘅|玩到|为止|还数|执嘢|揾到|执手尾|掟个|来睇下|从|行到|行晒|佢个老豆叫|佢识得|明白未啊|落Order|饮茶先啦|拍住上|係|比唔上|或者|辛苦晒啦|同我躝|唔啱|啱|冇|有条仆街叫|顶你|丢你|嗌|过嚟估下|佢有啲咩|自己嘅|下|@|埋堆|/, 
-      token: "keyword"},
+    {regex: /畀我睇下|点样先|收工|喺|定|老作一下|起底|讲嘢|咩系|唔系|系|如果|嘅话|->|同埋|咩都唔做|落操场玩跑步|$|用下|使下|要做咩|搞掂|就|谂下|佢嘅|玩到|为止|还数|执嘢|揾到|执手尾|掟个|来睇下|从|行到|行晒|佢个老豆叫|佢识得|明白未啊|落Order|饮茶先啦|拍住上|係|比唔上|或者|辛苦晒啦|同我躝|唔啱|啱|冇|有条仆街叫|顶你|丢你|嗌|过嚟估下|佢有啲咩|自己嘅|下|@|埋堆/, token: "keyword"},
     {regex: /0x[a-f\d]+|[-+]?(?:\.\d+|\d+\.?\d*)(?:e[-+]?\d+)?/i, token: "number"},
     {regex: /^#.*/, token: "comment"},
     {regex: /\/(?:[^\\]|\\.)*?\//, token: "variable-3"},

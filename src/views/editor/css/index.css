@@ -115,7 +115,7 @@
 
 .editor {
   width: 48vw;
-  font-size: 13px;
+  font-size: 19px;
 }
 
 .output-container {
@@ -134,7 +134,7 @@
   border: none;
   font-size: 16px;
   outline: none;
-  background-color: rgba(245, 245, 245);
+  background-color: #f5efef;
   white-space: pre-wrap;
   padding: 2vh;
   overflow: auto;

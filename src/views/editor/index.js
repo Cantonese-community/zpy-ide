@@ -8,7 +8,7 @@ import {view} from "./view"
 import {render} from "../../utils/render";
 
 render.mount(view).then(() => {
-    import("./js/cantonese-mode")
+    import("./js/zpy-mode")
     import("./js/code").then(({Code}) => {
         log.info(Code)
         window.code = new Code()

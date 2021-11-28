@@ -5,7 +5,7 @@ let view = `
     <div class="container">
         <div class="sidebar item">
             <div class="header sidebar-header">
-                <p class="title">Zpy IDE</p>
+                <p class="title">Cantonese IDE</p>
             </div>
             <div class="dictionary" id="chapter">
                 <!-- <div class="chapter">
@@ -22,12 +22,11 @@ let view = `
                 </div> -->
             </div>
         </div>
-
         <div class="main">
             <div class="code-container">
                 <div class="editor item" id="zpy-editor">
                     <div class="header">
-                        <p class="title editor-title">zpy编辑区</p>
+                        <p class="title editor-title">Cantonese编辑区</p>
                         <div class="toolbar">
                             <div class="tool" type="button" title="运行" onClick="ide.zpyRun()">
                                 <img class="icon" id="zpy-run" src="${runSvg}"/>
@@ -37,9 +36,26 @@ let view = `
                             </div>
                         </div>
                     </div>
-                    <label for="cantonese-code">
-                        <textarea id="cantonese-code"></textarea>
+                    <label for="zpy-code">
+                        <textarea id="zpy-code"></textarea>
                     </label>
+                </div>
+                <div class="editor item" id="python-editor">
+                    <div class="header">
+                        <p class="title editor-title">生成python</p>
+                        <div class="toolbar">
+                            <div class="tool" type="button" title="运行" onClick="ide.pyRun()">
+                                <img class="icon" id="py-run" src="${runSvg}" alt="py-run"/>
+                            </div>
+                            <div class="tool" type="button" title="编译" onClick="ide.pyCompile()">
+                                <img class="icon" id="py-compile" src="${compileSvg}" alt="py-compile"/>
+                            </div>
+                        </div>
+                    </div>
+                    <label for="python-code">
+                        <textarea id="python-code"></textarea>
+                    </label>
+                </div>
             </div>
             <div class="output-container item">
                 <pre id="output-code" readOnly></pre>
